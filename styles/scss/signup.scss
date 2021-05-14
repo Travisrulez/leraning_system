@@ -1,0 +1,47 @@
+// Main styles
+@import '_main';
+
+// Header
+@import '_header';
+
+// Sign Up
+.signup {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  h1 {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b9b9b9;
+    font-size: 14px;
+    margin: 10px 0;
+
+    a {
+      color: #457699;
+      text-decoration: none;
+    }
+
+    input {
+      margin-right: 5px;
+    }
+  }
+}
+

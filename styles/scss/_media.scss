@@ -1,0 +1,51 @@
+// MEDIA
+@media screen and (max-width: 1200px) {
+  ._container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  ._container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ._container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  ._container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .btn {
+    padding: 7px 15px;
+    border-width: 1px;
+  }
+
+  .modal {
+    padding: 20px 30px;
+
+    &__input {
+      width: 220px;
+      padding: 10px 15px;
+    }
+
+    &__btn {
+      width: 220px;
+      padding: 10px 15px;
+    }
+
+    &__close {
+      font-size: 18px;
+      right: 10px;
+      top: 5px;
+    }
+  }
+}

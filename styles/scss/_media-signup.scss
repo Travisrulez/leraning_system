@@ -1,0 +1,22 @@
+@import '_media';
+
+@media screen and (max-width: 768px) {
+  .signup-selection {
+    flex-direction: column;
+
+    &__link {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .signup-selection {
+    flex-direction: column;
+
+    &__link {
+      width: 250px;
+      height: 200px;
+    }
+  }
+}

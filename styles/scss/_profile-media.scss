@@ -1,0 +1,91 @@
+// MEDIA
+@media screen and (max-width: 1200px) {
+  ._container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  ._container {
+    max-width: 720px;
+  }
+
+  .header {
+    &__container {
+      padding: 0 10px 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ._container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  ._container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .btn {
+    padding: 7px 15px;
+    border-width: 1px;
+  }
+
+  .header {
+    &__container {
+      padding: 0 0 0 15px;
+    }
+
+    &__auth-icon {
+      display: flex;
+    }
+
+    &__auth {
+      position: relative;
+
+      &:hover, &.active {
+        background-color: #eee;
+      }
+  
+      &.active .header__links {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__links {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+      background-color: #fafafa;
+      box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+      right: 0;
+      top: 60px;
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+
+      a {
+        width: 100%;
+        display: block;
+        width: 100%;
+        padding: 10px 40px;
+        margin: 5px 0;
+
+        &:hover, &:active {
+          color: #fff;
+          background-color: #67a4cf;
+        }
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

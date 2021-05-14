@@ -1,0 +1,120 @@
+@import '_media';
+
+@media screen and (max-width: 992px) {
+  .search-teacher {
+    h2 {
+      font-size: 26px;
+    }
+
+    &__input-form {
+      input {
+        width: 650px;
+      }
+    }
+  }
+
+  .teacher {
+    &__price {
+      margin-right: 30px;
+      font-size: 24px;
+    }
+  }
+
+  .subscribe {
+    &__content {
+      padding: 30px;
+
+      p {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-teacher {
+    &__input-form {
+      input {
+        width: 500px;
+      }
+    }
+  }
+
+  .teacher {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__wrapper {
+      margin-bottom: 20px;
+    }
+
+    &__contact {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    &__btn {
+      order: 1;
+    }
+
+    &__price {
+      order: 2;
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  .subscribe {
+    &__content {
+      width: 100%;
+      padding: 40px;
+    }
+
+    &__background {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .search-teacher {
+    h2 {
+      font-size: 20px;
+    }
+
+    &__input-form {
+      input {
+        width: 90vw;
+      }
+    }
+  }
+
+  .teachers {
+    h1 {
+      font-size: 26px;
+    }
+  }
+
+  .teacher {
+    &__image {
+      display: none;
+    }
+
+    &__details {
+      margin-left: 0;
+    }
+
+    &__price {
+      font-size: 20px;
+    }
+  }
+
+  .subscribe {
+    &__content {
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+}

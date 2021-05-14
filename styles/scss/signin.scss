@@ -1,0 +1,47 @@
+// Main styles
+@import '_main';
+
+// Header
+@import '_header';
+
+// Sign In
+.signin {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  h1 {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  a.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  a.btn-cancel {
+    border-color: rgb(175, 54, 54);
+    color: rgb(175, 54, 54);
+
+    &:hover {
+      background-color: rgb(175, 54, 54);
+      color: #fff;
+    }
+  }
+}
+
