@@ -1,7 +1,7 @@
 <?php 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-ini_set('error_reporting', E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// ini_set('error_reporting', E_ALL);
 require_once 'core/connection.php';
 if (isset($_POST['submit'])) {
   $check_phone = mysqli_query($con, "SELECT phone FROM students WHERE phone = '".$_POST['phone']."'");

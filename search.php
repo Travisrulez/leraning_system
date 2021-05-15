@@ -1,7 +1,7 @@
 <?php 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-ini_set('error_reporting', E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// ini_set('error_reporting', E_ALL);
 session_start();
 require_once 'core/connection.php';
 require_once 'core/functions.php';
@@ -100,13 +100,16 @@ else {
           <span class="teacher__price"><?=$select_while['price']?></span>
           <?php 
           // $_SESSION['task'] = $card['name'];
-          if (empty($_SESSION['t_id'])) {
+          if (!empty($_SESSION['s_id'])) {
             echo '<button class="btn teacher__btn" name="signup" type="submit">Записаться</button>';
-          } else {
+          } elseif (!empty($_SESSION['t_id'])) {
             if ($_SESSION['t_id'] == $select_while['t_id']) { ?>
-                            <a class="btn-delete" href="del-card.php?del_card=<?=$select_while['id']?>" title="Удалить">Удалить</a>
+                            <a class="btn" href="del-card.php?del_card=<?=$select_while['id']?>" title="Удалить">Удалить</a>
             <?php } else {
-            echo '<button class="btn disabled teacher__btn" name="signup" type="submit" disabled>Нет доступа</button>';            }
+              echo '<button class="btn disabled teacher__btn" name="signup" type="submit" disabled>Нет доступа</button>';
+            }
+          } else {
+            echo '<button class="btn teacher__btn" name="signup" type="submit"><a href="signup-selection.php">Записаться</a></button>';
           }
           ?>
           </form>

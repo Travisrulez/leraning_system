@@ -1,7 +1,7 @@
 <?php 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-ini_set('error_reporting', E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// ini_set('error_reporting', E_ALL);
 session_start();
 require_once 'core/connection.php';
 require_once 'core/functions.php';
@@ -99,14 +99,16 @@ if (isset($_POST['signup'])) {
           <span class="teacher__price"><?=$card['price']?></span>
           <?php 
           // $_SESSION['task'] = $card['name'];
-          if (empty($_SESSION['t_id'])) {
+          if (!empty($_SESSION['s_id'])) {
             echo '<button class="btn teacher__btn" name="signup" type="submit">Записаться</button>';
-          } else {
+          } elseif (!empty($_SESSION['t_id'])) {
             if ($_SESSION['t_id'] == $card['t_id']) { ?>
                             <a class="btn" href="del-card.php?del_card=<?=$card['id']?>" title="Удалить">Удалить</a>
             <?php } else {
               echo '<button class="btn disabled teacher__btn" name="signup" type="submit" disabled>Нет доступа</button>';
             }
+          } else {
+            echo '<button class="btn teacher__btn" name="signup" type="submit"><a href="signup-selection.php">Записаться</a></button>';
           }
           ?>
           </form>
