@@ -23,9 +23,9 @@ else {
 
     if (isset($_POST['signup'])) {
       if (empty($_SESSION['t_id'])) {
-        $sql = "INSERT INTO teacher_students(t_id, name, surname, patronymic, task, phone, img) VALUE('".$_POST['t_id']."', '".$_SESSION['s_name']."',  '".$_SESSION['s_surname']."', '".$_SESSION['s_patronymic']."', '".$_POST['task']."', '".$_SESSION['s_phone']."', '".$_SESSION['s_img']."')";
+        $sql = "INSERT INTO teacher_students(t_id, s_id, name, surname, patronymic, task, phone, img) VALUE('".$_POST['t_id']."', '".$_SESSION['s_id']."', '".$_SESSION['s_name']."',  '".$_SESSION['s_surname']."', '".$_SESSION['s_patronymic']."', '".$_POST['task']."', '".$_SESSION['s_phone']."', '".$_SESSION['s_img']."')";
         mysqli_query($con, $sql);
-        $ssql = "INSERT INTO student_teachers(s_id, task, name, surname, patronymic, phone, img) VALUE('".$_SESSION['s_id']."', '".$_POST['task']."', '".$_POST['firstname']."', '".$_POST['surname']."', '".$_POST['patronymic']."', '".$_POST['phone']."', '".$_POST['img']."')";
+        $ssql = "INSERT INTO student_teachers(s_id, t_id, task, name, surname, patronymic, phone, img) VALUE('".$_SESSION['s_id']."', '".$_POST['t_id']."', '".$_POST['task']."', '".$_POST['firstname']."', '".$_POST['surname']."', '".$_POST['patronymic']."', '".$_POST['phone']."', '".$_POST['img']."')";
         mysqli_query($con, $ssql);
         // echo $_POST['phone'];
         header('location: index.php');
